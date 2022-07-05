@@ -53,13 +53,15 @@ We used two large datasets from two different sources: World Bank and ITU, and C
 •	JavaScript for plotting the interactive charts
 
 # JS Libraries:
-•	Highcharts – Useful for complex chart types with fully fledged cutsomisations: https://www.highcharts.com/blog/download/
-•	Plotly.js - Open Source Graphing Libraries:
+### •	Highcharts – Useful for complex chart types with fully fledged customisations:
+https://www.highcharts.com/blog/download/
+
+### •	Plotly.js - Open Source Graphing Libraries:
 https://plotly.com/graphing-libraries/ 
 
 
 
-#Steps taken with photos
+# Steps taken with photos
 
 ### Step 1
 
