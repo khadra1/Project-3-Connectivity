@@ -1,28 +1,83 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    height: 100vh;
-    width: 100vw;
+body{
+    background-color: #4c7c9b;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size:24px;
 }
-.container div{
-    border:1px solid #111;
+
+
+h1{
+
+    color: white;
 }
-.container_left, .container_right {
-    width:49%;
-    height: 100%;
+
+
+select, input{
+    font-size: 1.5rem;
 }
-.container_right{
-    flex-direction: column;
+
+  
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: #e8e8e8;
+  }
+
+  #myButtons {
+    background-color: #004c6d;
+    border:solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+  }
+
+  .box-big{
+      display: flex;
+      height: 40vh;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-bottom: 3rem;
+      
+  }
+  .box-big:first-child{
+      
+      display: none;
+  }
+  .box-big h2{
+      text-align: left;
+      font-size:1.5rem;
+      color:#111;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      color: white;
+  }
+#map-box{
+    width:40%;
 }
-.container_right_up, .container_right_down{
-    display: flex;
-    align-items: center;
-    height: 49%;
-    width: 100%;  
+  .box-big-left, .box-big-right{
+      width: 28%;
+      height: 100%;
+
+  }
+  .box-bottom-left, .box-bottom-right{
+      height:100%;
+      width:30%;
+  }
+  .box-bottom-left{
+      width:65%;
+  }
+.box-big-right{
+    position: relative;
+    z-index:10;
 }
-.container_right_up div, .container_right_down div{
-    width: 49%;
-    height: 100%;
+.slider{
+    position: absolute;
+    bottom:-4rem;
+    right:6rem;
+    z-index: 100;
 }
