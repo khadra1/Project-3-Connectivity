@@ -9,7 +9,7 @@ Visualising Internet Usage Around the World
 
 # Description:
 
-We sourced data on Global internet usage and connectivity over the years. Which we then cleaned, stored in a  SQL database online so we could fetch it using our Flask-Powered API and visualise the different datasets in mutliple ways with dynamic and interactive Map and Charts wit submit buttons and year sliders. 
+We sourced data on Global internet usage and connectivity over the years. Which we then cleaned, stored in a  SQL database online so we could fetch it using our Flask-Powered API and visualise the different datasets in mutliple ways with dynamic and interactive Map and Charts with submit buttons and year sliders. 
 
 #	Our Theme: 
 ### Visualising Global Internet and Phone Usage:
@@ -26,13 +26,14 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 
 - Interactive Bar chart visualising world countries connectivity data collected by the World Bank from 2000 to 2020 which connects with world map when option is submitted.
 
-- Interactive World Map with dynamic legend that changes according to datasets with a year slider from 2000-2020. Same dataset as the countries chart is used and the submit button in that chart also control the map.
+- Interactive World Map with dynamic legend that changes according to datasets with a year slider from 2000-2020. Same dataset as the countries chart is used here and the submit button in that chart also controls the map.
 
 - Interactive Grouped Bar Chart for World Regions Gender and Age connectivity data collected by the ITU.
 
 # Dashboard
+### This Dashboard has business and developmental uses.
+From our dashboard you can view the changes in internet and phone usage in countries and regions around the world. There is a clear increase in mobile phones as landlines decrease. In some parts of the world people's first, and often only, connection to the internet is through mobile phones. 
 
-From our dashboard you can view the changes in internet and phone usage in countries and regions around the world. There is a clear increase in mobile phones as landlines decrease. In some parts of the world people's first, and often only, connection the internet is through mobile phones. 
 
 
 # Data Sources:
@@ -46,15 +47,20 @@ We used two large datasets from two different sources: World Bank and ITU, and C
 
 
 # Technologies:
-### •	Database: pgAdmin/SQL-Postgres using Heroku
+### •	Database: 
+pgAdmin/SQL-Postgres using Heroku
 
-### •	Python Flask-powered API to automatically fetch data and render the template
+### •	Python Flask-powered API:
+To automatically fetch data and render the template
 
-### •	Python using Pandas Jupyter Notebook to clean the data for the data cleaning function we used to load our data
+### •	Python using Pandas Jupyter Notebook:
+To clean the data for the data cleaning function we used to load our data
 
-### •	HTML / CSS for the index.html layout and to plot our charts
+### •	HTML / CSS:
+For the index.html layout and to render our charts
 
-### •	JavaScript for plotting the interactive charts
+### •	JavaScript:
+for plotting the interactive charts
 
 # JS Libraries:
 ### •	Highcharts – Useful for complex chart types with fully fledged customisations:
