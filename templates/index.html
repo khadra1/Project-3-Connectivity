@@ -12,12 +12,16 @@
 // Loading the data from Flask and saving it in a variable
         let alldata = {{ data| tojson }};
         // let alldataworld = JSON.parse(alldata);
+       
+       
+        // Highcharts.js scripts
     </script>
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
     <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+    <!-- CSS link -->
     <link rel="stylesheet" href="../static/css/style.css">
 
 </head>
@@ -64,7 +68,7 @@
         </div>
         <!-- Interactive Chart for Internet Usage by Sex for World Regions-->
         <div class="box-big-left">
-            <h2>Percentage of individuals using the Internet, by Sex</h2>
+            <h2>Percentage of Individuals using the Internet, by Sex</h2>
             <div  id="gender-plot" style="height:100%;width:100%"></div>
         </div>
     </div>
@@ -79,7 +83,7 @@
         </div>
         <!-- Interactive Chart for Internet Usage by Age for World Regions -->
         <div  class="box-bottom-right"  >
-            <h2>Percentage of individuals using the Internet, by Age</h2>
+            <h2>Percentage of Individuals using the Internet, by Age</h2>
             <div style="width: 100%; height:100%;" id="age-plot"></div>
         </div>
     </div>
