@@ -2,17 +2,17 @@
 Visualising Internet Usage Around the World
 
 # Contributors
--
--
--
--
+### -
+### -
+### -
+### -
 
 # Description:
 
 We sourced data on Global internet usage and connectivity over the years. Which we then cleaned, stored in a  SQL database online so we could fetch it using our Flask-Powered API and visualise the different datasets in mutliple ways with dynamic and interactive Map and Charts wit submit buttons and year sliders. 
 
 #	Our Theme: 
-Visualising Global Internet and Phone Usage:
+### Visualising Global Internet and Phone Usage:
 
 •	Individuals using the internet 
 •	Fixed broadband subscription
@@ -38,19 +38,23 @@ From our dashboard you can view the changes in internet and phone usage in count
 # Data Sources:
 We used two large datasets from two different sources: World Bank and ITU, and Countries Location dataset from Kaggle.
 
-- World Bank
-- ITU
-- Kaggle
+### - World Bank
+### - ITU
+### - Kaggle
 
 
 
 
 # Technologies:
-•	Database: pgAdmin/SQL-Postgres using Heroku
-•	Python Flask-powered API to automatically fetch data and render the template
-•	Python using Pandas Jupyter Notebook to clean the data for the data cleaning function we used to load our data
-•	HTML / CSS for the index.html layout and to plot our charts
-•	JavaScript for plotting the interactive charts
+### •	Database: pgAdmin/SQL-Postgres using Heroku
+
+### •	Python Flask-powered API to automatically fetch data and render the template
+
+### •	Python using Pandas Jupyter Notebook to clean the data for the data cleaning function we used to load our data
+
+### •	HTML / CSS for the index.html layout and to plot our charts
+
+### •	JavaScript for plotting the interactive charts
 
 # JS Libraries:
 ### •	Highcharts – Useful for complex chart types with fully fledged customisations:
@@ -103,9 +107,9 @@ We pulled the data from app.py and accessed it in our template so we could plot 
 
 
 # How to run this:
-- Locally:
+### - Locally:
 
-- Online:
+### - Online:
 
 
 
