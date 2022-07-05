@@ -1,118 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   <!-- Our CSS -->
-   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+// Loading the data from Flask and saving it in a variable
+        let alldata = {{ data| tojson }};
+        // let alldataworld = JSON.parse(alldata);
+    </script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+
 </head>
+<!-- Page Title -->
 <body>
+    <h1>World Connectivity Visualisation Dashboard</h1>
 
-<nav class="navbar navbar-inverse visible-xs">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- for loop to fetch data from plot_chart function in the flask for the submit option -->
+    <form action="{{ url_for("plot_chart") }}" method="post">
+        <select name="filter1">
+            {% for o in data['filter1list'] %}
+            <option value="{{ o }}" {{ 'selected="selected"' if o==data['filter1']}}>{{ o }}</option>
+            {% endfor %}
+        </select>
+        <select name="filter2">
+            {% for o in data['filter2list'] %}
+            <option value="{{ o }}" {{ 'selected="selected"' if o==data['filter2']}}>{{ o }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Countries chart connected to the above function -->
+    <div class="box-big">
+        <div class="box-big-left">
+            <h2>World Countries Data</h2>
+            <div style="height:100%;width:100%" id="plot"></div>
+        </div>
 
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
-      </ul><br>
+        <!-- Interactive World map with dynamic legend, connected to the same submit buttons as the bar chart above -->
+        <div id="map-box" class="box-big-right"> 
+            <h2>World Map</h2>
+            <div class="slider">
+                <span id="show_slider_value" style="color:black;font-weight:bold;"></span><br>
+                <input type="range" min="2000" max="2020" step="1" value="2000" name="year"
+                    onchange="updateChart(this.value)">
+            </div>
+            <!-- Before/while the data loads this message will show -->
+            <div style="height:100%;width:100%" id="container-map">
+                <div class="loading">
+                    <i class="icon-spinner icon-spin icon-large"></i>
+                    Loading data from World Bank...
+                </div>
+            </div>
+        </div>
+        <!-- Interactive Chart for Internet Usage by Sex for World Regions-->
+        <div class="box-big-left">
+            <h2>Percentage of individuals using the Internet, by Sex</h2>
+            <div  id="gender-plot" style="height:100%;width:100%"></div>
+        </div>
     </div>
-    <br>
-    
-    <div class="col-sm-9">
-      <div class="well">
-        <h4>MAP</h4>
-        <p>Some text..</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p> 
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="well">
-            <p>Text</p> 
-          </div>
-        </div>
-        
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+
+    <!--  Interactive Line chart for World Regions -->
+    <div class="box-big">
+        <div class="box-bottom-left">
+            <h2> World Region Data</h2>
+            <div id="myButtons"></div>
+            <div style="width: 100%; height:100%;" id='line-chart'></div>
+        </div>
+        <!-- Interactive Chart for Internet Usage by Age for World Regions -->
+        <div  class="box-bottom-right"  >
+            <h2>Percentage of individuals using the Internet, by Age</h2>
+            <div style="width: 100%; height:100%;" id="age-plot"></div>
+        </div>
+    </div>
+
+
+
+<!--  Javascript scripts -->
+    <script type="text/javascript" src="../static/js/app.js"></script>
+    <script type="text/javascript">
+
+        // Filtering record by Year and Series Name for World Map including the function for the
+        function updateChart(year) {
+            update_slider_value(year)
+            // console.log("year=" + year);
+            filterResult = Object.values(JSON.parse(alldata.dataWorld)).filter(jd => jd.Year === parseInt(year) && jd.SeriesName === title);
+            //   let filterResult = JSON.parse(alldata.dataWorld);
+            // console.log("filterResult = " + filterResult);
+            // console.log("alldata =" + alldata.dataWorld);
+            const jData = filterResult.map((value, index) => ({
+                code: value.Codes.toUpperCase(),
+                value: parseFloat(value.Values),
+                name: value.Country
+            }));
+            drawChart(jData, year);
+        };
+        updateChart(2000);
+    </script>
 </body>
-</html>
 
+</html>
