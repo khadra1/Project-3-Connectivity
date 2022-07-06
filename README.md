@@ -39,9 +39,14 @@ From our dashboard you can view the changes in internet and phone usage in count
 # Data Sources:
 We used two large datasets from two different sources: World Bank and ITU, and Countries Location dataset from Kaggle.
 
-### - Connectivity Data from the World Bank: https://data.worldbank.org/indicator/IT.NET.USER.ZS
-### - Connectivity Data from the ITU (UN Agency for IT and Communication): https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx
-### - Countries Location Data from Kaggle: https://www.kaggle.com/datasets/qramkrishna/world-coordinates?select=world_country.csv
+### - Connectivity Data from the World Bank: 
+https://data.worldbank.org/indicator/IT.NET.USER.ZS
+
+### - Connectivity Data from the ITU (UN Agency for IT and Communication): 
+https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx
+
+### - Countries Location Data from Kaggle: 
+https://www.kaggle.com/datasets/qramkrishna/world-coordinates?select=world_country.csv
 
 
 
@@ -106,16 +111,57 @@ We pulled the data from app.py and accessed it in our template so we could plot 
 
 ### Final Dashboard
 •	Screenshot of the final dashboard
+
 ![dashboard](https://user-images.githubusercontent.com/67019030/177653123-feb85636-1ee5-4746-a658-58879d3c91a8.png)
 
 
 
 # How to run this:
 ### - Locally:
+Clone the GitHub repository and create a virtual environment using the follwing commands for your Operating System:
+Linux:
+1. If pip is not in your system:
+`$ sudo apt-get install python-pip`
 
-### - Online:
+2. Then install virtualenv
+`$ pip install virtualenv`
+
+3. Now check your installation
+`$ virtualenv --version`
+
+4. Create a virtual environment now
+`$ virtualenv virtualenv_name`
+
+5. Finally activate the virtual environment inside the directory for this project:
+`$ source virtualenv_name/bin/activate`
+
+Windows:
+
+1. If pip isn't present you can install it using pip
+`python get-pip.py`
+
+2. Then install virtualenv
+`pip install virtualenv`
+
+3. Create a virtual environment now
+`virtualenv --python C:\Path\To\Python\python.exe venv`
+
+4. Finally actiivate teh virtual environment inside the directory for this project:
+`.\venv\Scripts\activate`
 
 
+1. If pip isn't present you can install it using pip
+`sudo easy_install pip`
 
+2. Then install virtualenv
+`sudo pip install virtualenv``
 
+3. Create a virtual environment now
+`virtualenv env`
+
+4. Finally actiivate teh virtual environment inside the directory for this project:
+`source env/bin/activate`
+
+Then downlaod the relevenant dependencies by using the command pip `freeze > requirements.txt`
+You can now run this project locally.
 
