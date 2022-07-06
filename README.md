@@ -166,10 +166,9 @@ Clone the GitHub repository and create a virtual environment using the follwing 
 4. Finally actiivate teh virtual environment inside the directory for this project:
 `source env/bin/activate`
 
-OSx
 
-sudo easy_install pip
 
-Then download the relevenant dependencies by using the command pip `freeze > requirements.txt`
-You can now run this project locally.
+Finally download the relevenant dependencies by using the command pip `freeze > requirements.txt`
+
+You can now run this project locally!
 
