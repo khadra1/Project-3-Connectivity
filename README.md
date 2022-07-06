@@ -15,9 +15,13 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 ### Visualising Global Internet and Phone Usage:
 
 •	Individuals using the internet 
+
 •	Fixed broadband subscription
+
 •	Mobile Cellular subscription 
+
 •	Secure Internet Servers
+
 •	Fixed telephone subscriptions
 
 # Types of visualisations:
@@ -64,7 +68,7 @@ To clean the data for the data cleaning function we used to load our data
 For the index.html layout and to render our charts
 
 ### •	JavaScript:
-for plotting the interactive charts
+For plotting the interactive charts
 
 # JS Libraries:
 ### •	Highcharts – Useful for complex chart types with fully fledged customisations:
