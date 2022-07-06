@@ -4,11 +4,12 @@ from sqlalchemy import create_engine
 from flask_sqlalchemy import SQLAlchemy
 # import psycopg2
 # Import the load_data function from main.py
+import os
 from scripts.main import load_data
 # Create an instance of Flask
 app = Flask(__name__)
 # Using Heroku to connect to pgAdmin database and make it available online
-db_url = "postgresql://njuguscorkabpk:14f0dd2bc05cce718487cbff320b81dd7088ba958ac59cc07c82152d4b23909f@ec2-34-225-159-178.compute-1.amazonaws.com:5432/d6sa1vahv1mif0"
+db_url = os.environ.get("SQL_DATABASE_URI")
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 db = SQLAlchemy(app)
 def create_database():
@@ -34,5 +35,6 @@ def plot_chart():
     data = load_data('Fixed broadband subscriptions','Zimbabwe')
          # Return template and data when page refreshes/is loaded
     return render_template("index.html", data=data)
+
 if __name__ == "__main__":
-    app.run(debug=True, host="localhost", port=8000)
+    app.run()
