@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
-// Loading the data from Flask and saving it in a variable
+        // Loading the data from Flask and saving it in a variable
         let alldata = {{ data| tojson }};
         // let alldataworld = JSON.parse(alldata);
        
        
-        // Highcharts.js scripts
+    // Highcharts.js scripts
     </script>
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
@@ -67,28 +73,26 @@
             </div>
         </div>
         <!-- Interactive Chart for Internet Usage by Sex for World Regions-->
-        <div class="box-big-left">
+        <div class="box-big-left"  style="margin-top: -52px;">
             <h2>Percentage of Individuals using the Internet, by Sex</h2>
             <div  id="gender-plot" style="height:100%;width:100%"></div>
         </div>
     </div>
-
 
     <!--  Interactive Line chart for World Regions -->
     <div class="box-big">
         <div class="box-bottom-left">
             <h2> World Region Data</h2>
             <div id="myButtons"></div>
-            <div style="width: 100%; height:100%;" id='line-chart'></div>
+            <div  id='line-chart'></div>
         </div>
+
         <!-- Interactive Chart for Internet Usage by Age for World Regions -->
         <div  class="box-bottom-right"  >
             <h2>Percentage of Individuals using the Internet, by Age</h2>
-            <div style="width: 100%; height:100%;" id="age-plot"></div>
+            <div  id="age-plot"></div>
         </div>
     </div>
-
-
 
 <!--  Javascript scripts -->
     <script type="text/javascript" src="../static/js/app.js"></script>
@@ -97,11 +101,7 @@
         // Filtering record by Year and Series Name for World Map including the function for the
         function updateChart(year) {
             update_slider_value(year)
-            // console.log("year=" + year);
             filterResult = Object.values(JSON.parse(alldata.dataWorld)).filter(jd => jd.Year === parseInt(year) && jd.SeriesName === title);
-            //   let filterResult = JSON.parse(alldata.dataWorld);
-            // console.log("filterResult = " + filterResult);
-            // console.log("alldata =" + alldata.dataWorld);
             const jData = filterResult.map((value, index) => ({
                 code: value.Codes.toUpperCase(),
                 value: parseFloat(value.Values),

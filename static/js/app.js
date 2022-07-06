@@ -1,4 +1,3 @@
-// console.log("data=" + alldata.x);
 // World countries bar chart
 let title = alldata.filter1;
 
@@ -10,7 +9,14 @@ let trace1 = {
 };
 let data = [trace1];
 let layout = {
-  title: title
+  title: title,
+  margin: {
+    l: 50,
+    r: 30,
+    b: 40,
+    t: 50,
+   
+    }
 };
 Plotly.newPlot("plot", data, layout);
 
@@ -272,7 +278,18 @@ let dataGender = [genderTrace1,genderTrace2,genderTrace3];
 
 let layoutGender = {barmode: 'group',
 showlegend: true,
-legend: {orientation: 'h'}
+legend: {orientation: 'h',
+xanchor: "center",
+yanchor: "bottom",
+y: 1.0,
+x: 0.5},
+margin: {
+l: 34,
+r: 36,
+b: 60,
+t: 50,
+pad: 2
+}
 };
 
 Plotly.newPlot('gender-plot', dataGender, layoutGender);
@@ -313,7 +330,18 @@ let dataAge = [ageTrace1, ageTrace2, ageTrace3];
 
 let layoutAge = {barmode: 'group',
 showlegend: true,
-legend: {orientation: 'h'}
+legend: {orientation: 'h',
+xanchor: "center",
+yanchor: "bottom",
+y: 1.0,
+x: 0.5},
+margin: {
+l: 34,
+r: 26,
+b: 60,
+t: 50,
+pad: 2
+}
 
 };
 
