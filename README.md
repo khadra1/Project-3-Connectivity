@@ -164,7 +164,7 @@ Clone the GitHub repository and create a virtual environment using the follwing 
 `sudo easy_install pip`
 
 2. Then install virtualenv
-`sudo pip install virtualenv``
+`sudo pip install virtualenv`
 
 3. Create a virtual environment now
 `virtualenv env`
