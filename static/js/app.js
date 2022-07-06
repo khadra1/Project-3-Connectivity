@@ -35,7 +35,6 @@ async function drawChart(data1, year) {
 
   //total number of element -> average length of digits = 2
   avg = parseInt(avg / data1.length);
-  console.log("average ",avg)
 
   // Highcharts.js World Mpap function
   const topology = await fetch(

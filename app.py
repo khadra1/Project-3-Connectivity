@@ -1,7 +1,5 @@
-from dataclasses import dataclass
 from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
-from flask.json import JSONEncoder
 from scripts.main import load_data
 
 
