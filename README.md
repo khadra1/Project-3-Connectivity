@@ -2,17 +2,10 @@
 Visualising Internet Usage Around the World
 
 # Contributors
-<<<<<<< HEAD
-### -
-### -
-### -
-### -
-=======
 ### - Khadra
 ### - Chisimnulia
 ### - Kudzanai 
 
->>>>>>> main
 
 # Description:
 
@@ -22,11 +15,6 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 ### Visualising Global Internet and Phone Usage:
 
 •	Individuals using the internet 
-<<<<<<< HEAD
-•	Fixed broadband subscription
-•	Mobile Cellular subscription 
-•	Secure Internet Servers
-=======
 
 •	Fixed broadband subscription
 
@@ -34,7 +22,6 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 
 •	Secure Internet Servers
 
->>>>>>> main
 •	Fixed telephone subscriptions
 
 # Types of visualisations:
@@ -48,10 +35,6 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 - Interactive Grouped Bar Chart for World Regions Gender and Age connectivity data collected by the ITU.
 
 # Dashboard
-<<<<<<< HEAD
-### This Dashboard has business and developmental uses.
-=======
->>>>>>> main
 From our dashboard you can view the changes in internet and phone usage in countries and regions around the world. There is a clear increase in mobile phones as landlines decrease. In some parts of the world people's first, and often only, connection to the internet is through mobile phones. 
 
 
@@ -59,11 +42,6 @@ From our dashboard you can view the changes in internet and phone usage in count
 # Data Sources:
 We used two large datasets from two different sources: World Bank and ITU, and Countries Location dataset from Kaggle.
 
-<<<<<<< HEAD
-### - World Bank
-### - ITU
-### - Kaggle
-=======
 ### - Connectivity Data from the World Bank: 
 https://data.worldbank.org/indicator/IT.NET.USER.ZS
 
@@ -72,18 +50,13 @@ https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx
 
 ### - Countries Location Data from Kaggle: 
 https://www.kaggle.com/datasets/qramkrishna/world-coordinates?select=world_country.csv
->>>>>>> main
 
 
 
 
 # Technologies:
 ### •	Database: 
-<<<<<<< HEAD
-pgAdmin/SQL-Postgres using Heroku
-=======
 MongoDB using Flask-PyMongo 
->>>>>>> main
 
 ### •	Python Flask-powered API:
 To automatically fetch data and render the template
@@ -95,11 +68,7 @@ To clean the data for the data cleaning function we used to load our data
 For the index.html layout and to render our charts
 
 ### •	JavaScript:
-<<<<<<< HEAD
-for plotting the interactive charts
-=======
 For plotting the interactive charts
->>>>>>> main
 
 # JS Libraries:
 ### •	Highcharts – Useful for complex chart types with fully fledged customisations:
@@ -110,65 +79,16 @@ https://plotly.com/graphing-libraries/
 
 
 
-<<<<<<< HEAD
-# Steps taken with photos
-
-=======
 # Steps taken 
->>>>>>> main
 ### Step 1
 
 Drawing out how we envision our dashboard to be
 •	Sketch of our planned visualisations
-<<<<<<< HEAD
-=======
 ![image](https://user-images.githubusercontent.com/67019030/177653668-49bde6f8-7cb4-43da-b0ee-0020d264505d.jpeg)
->>>>>>> main
 
 
 ### Step 2
 Finding the relevant data.
-<<<<<<< HEAD
-•	Screenshot of datsets
-•	Sketch of metadata
-
-
-### Step 3
-Extracting the relevant data, cleaning it and finaly merging with the location dataset 
-•	Screenshot Jupyter Notebook
-
-### Step 4
-Putting all of Step 3's data extraction and transformation in a function so we can load the data to our database for our charts and map.
-•	Screenshot of main.py
-
-### Step 5
-
-Using Flask-Powered API to connect to our database, fetch and laod data
-•	Screenshot of app.py
-
-### Step 6
-Plotting the datasets saved under relevant variables in the output in main.py and app.py.
-•	Screenshot of app.js
-
-### Step 7
-We pulled the data from app.py and accessed it in our template so we could plot in our charts and map. Using the CSS and HTML attributes to positon our charts in the dashboard.
-•	Screenshot of index.html
-•	Screenshot of style.css
-
-### Final Dashboard
-•	Screenshot of the final dashboard
-
-
-
-# How to run this:
-### - Locally:
-
-### - Online:
-
-
-
-
-=======
 
 ### Step 3
 Extracting the relevant data, cleaning it and finaly merging with the location dataset 
@@ -248,5 +168,4 @@ Windows:
 
 Then downlaod the relevenant dependencies by using the command pip `freeze > requirements.txt`
 You can now run this project locally.
->>>>>>> main
 
