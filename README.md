@@ -31,7 +31,6 @@ We sourced data on Global internet usage and connectivity over the years. Which 
 - Interactive Grouped Bar Chart for World Regions Gender and Age connectivity data collected by the ITU.
 
 # Dashboard
-### This Dashboard has business and developmental uses.
 From our dashboard you can view the changes in internet and phone usage in countries and regions around the world. There is a clear increase in mobile phones as landlines decrease. In some parts of the world people's first, and often only, connection to the internet is through mobile phones. 
 
 
@@ -117,7 +116,7 @@ We pulled the data from app.py and accessed it in our template so we could plot 
 
 
 # How to run this:
-### - Locally:
+### Locally:
 Clone the GitHub repository and create a virtual environment using the follwing commands for your Operating System:
 Linux:
 1. If pip is not in your system:
