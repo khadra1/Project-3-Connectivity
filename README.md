@@ -92,7 +92,7 @@ Extracting the relevant data, cleaning it and finaly merging with the location d
 
 ### Step 4
 Putting all of Step 3's data extraction and transformation in a function so we can load the data to our database for our charts and map.
-•	Seemain.py
+•	See main.py
 
 ### Step 5
 
