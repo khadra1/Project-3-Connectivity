@@ -2,10 +2,10 @@
 Visualising Internet Usage Around the World
 
 # Contributors
-### -
-### -
-### -
-### -
+### - Khadra
+### - Chisimnulia
+### - Kudzanai 
+
 
 # Description:
 
@@ -39,16 +39,16 @@ From our dashboard you can view the changes in internet and phone usage in count
 # Data Sources:
 We used two large datasets from two different sources: World Bank and ITU, and Countries Location dataset from Kaggle.
 
-### - World Bank
-### - ITU
-### - Kaggle
+### - Connectivity Data from the World Bank: https://data.worldbank.org/indicator/IT.NET.USER.ZS
+### - Connectivity Data from the ITU (UN Agency for IT and Communication): https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx
+### - Countries Location Data from Kaggle: https://www.kaggle.com/datasets/qramkrishna/world-coordinates?select=world_country.csv
 
 
 
 
 # Technologies:
 ### •	Database: 
-pgAdmin/SQL-Postgres using Heroku
+MongoDB using Flask-PyMongo 
 
 ### •	Python Flask-powered API:
 To automatically fetch data and render the template
@@ -71,44 +71,42 @@ https://plotly.com/graphing-libraries/
 
 
 
-# Steps taken with photos
-
+# Steps taken 
 ### Step 1
 
 Drawing out how we envision our dashboard to be
 •	Sketch of our planned visualisations
+![image](https://user-images.githubusercontent.com/67019030/177653668-49bde6f8-7cb4-43da-b0ee-0020d264505d.jpeg)
 
 
 ### Step 2
 Finding the relevant data.
-•	Screenshot of datsets
-•	Sketch of metadata
-
 
 ### Step 3
 Extracting the relevant data, cleaning it and finaly merging with the location dataset 
-•	Screenshot Jupyter Notebook
+•	See Jupyter Notebook
 
 ### Step 4
 Putting all of Step 3's data extraction and transformation in a function so we can load the data to our database for our charts and map.
-•	Screenshot of main.py
+•	Seemain.py
 
 ### Step 5
 
-Using Flask-Powered API to connect to our database, fetch and laod data
-•	Screenshot of app.py
+Using Flask-Powered API to connect to our database, fetch the cleaned data from main.py and load data onto our MongoDB database.
+•	See app.py
 
 ### Step 6
 Plotting the datasets saved under relevant variables in the output in main.py and app.py.
-•	Screenshot of app.js
+•	See app.js
 
 ### Step 7
 We pulled the data from app.py and accessed it in our template so we could plot in our charts and map. Using the CSS and HTML attributes to positon our charts in the dashboard.
-•	Screenshot of index.html
-•	Screenshot of style.css
+•	See index.html
+•	See style.css
 
 ### Final Dashboard
 •	Screenshot of the final dashboard
+![dashboard](https://user-images.githubusercontent.com/67019030/177653123-feb85636-1ee5-4746-a658-58879d3c91a8.png)
 
 
 
