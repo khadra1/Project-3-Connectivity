@@ -153,7 +153,7 @@ Clone the GitHub repository and create a virtual environment using the follwing 
 4. Finally actiivate teh virtual environment inside the directory for this project:
 `.\venv\Scripts\activate`
 
-### On Mac
+### On Mac:
 1. If pip isn't present you can install it using pip
 `sudo easy_install pip`
 
