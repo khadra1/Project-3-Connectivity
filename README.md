@@ -113,6 +113,7 @@ We pulled the data from app.py and accessed it in our template so we could plot 
 •	See style.css
 
 ### Final Dashboard
+
 •	Screenshot of the final dashboard
 
 ![dashboard](https://user-images.githubusercontent.com/67019030/177653123-feb85636-1ee5-4746-a658-58879d3c91a8.png)
