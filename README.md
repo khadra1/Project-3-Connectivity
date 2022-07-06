@@ -91,25 +91,31 @@ Drawing out how we envision our dashboard to be
 Finding the relevant data.
 
 ### Step 3
-Extracting the relevant data, cleaning it and finaly merging with the location dataset 
+Extracting the relevant data, cleaning it and finaly merging with the location dataset.
+
 •	See Jupyter Notebook
 
 ### Step 4
 Putting all of Step 3's data extraction and transformation in a function so we can load the data to our database for our charts and map.
+
 •	See main.py
 
 ### Step 5
 
 Using Flask-Powered API to connect to our database, fetch the cleaned data from main.py and load data onto our MongoDB database.
+
 •	See app.py
 
 ### Step 6
 Plotting the datasets saved under relevant variables in the output in main.py and app.py.
+
 •	See app.js
 
 ### Step 7
 We pulled the data from app.py and accessed it in our template so we could plot in our charts and map. Using the CSS and HTML attributes to positon our charts in the dashboard.
+
 •	See index.html
+
 •	See style.css
 
 ### Final Dashboard
