@@ -123,7 +123,8 @@ We pulled the data from app.py and accessed it in our template so we could plot 
 # How to run this:
 ### Locally:
 Clone the GitHub repository and create a virtual environment using the follwing commands for your Operating System:
-Linux:
+
+### On Linux:
 1. If pip is not in your system:
 `$ sudo apt-get install python-pip`
 
@@ -139,8 +140,7 @@ Linux:
 5. Finally activate the virtual environment inside the directory for this project:
 `$ source virtualenv_name/bin/activate`
 
-Windows:
-
+### On Windows:
 1. If pip isn't present you can install it using pip
 `python get-pip.py`
 
@@ -153,7 +153,7 @@ Windows:
 4. Finally actiivate teh virtual environment inside the directory for this project:
 `.\venv\Scripts\activate`
 
-
+### On Mac
 1. If pip isn't present you can install it using pip
 `sudo easy_install pip`
 
@@ -166,6 +166,10 @@ Windows:
 4. Finally actiivate teh virtual environment inside the directory for this project:
 `source env/bin/activate`
 
-Then downlaod the relevenant dependencies by using the command pip `freeze > requirements.txt`
+OSx
+
+sudo easy_install pip
+
+Then download the relevenant dependencies by using the command pip `freeze > requirements.txt`
 You can now run this project locally.
 
