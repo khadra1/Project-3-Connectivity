@@ -174,7 +174,7 @@ Clone the GitHub repository and create a virtual environment using the follwing 
 
 
 
-Finally download the relevenant dependencies by using the command 'pip freeze > requirements.txt`
+Finally download the relevenant dependencies by using the command `pip freeze > requirements.txt`
 
 You can now run this project locally!
 
