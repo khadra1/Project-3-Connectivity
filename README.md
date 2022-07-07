@@ -9,7 +9,7 @@ Visualising Internet Usage Around the World
 
 # Description:
 
-We sourced data on Global internet usage and connectivity over the years. Which we then cleaned, stored in a  SQL database online so we could fetch it using our Flask-Powered API and visualise the different datasets in mutliple ways with dynamic and interactive Map and Charts with submit buttons and year sliders. 
+We sourced data on Global internet usage and connectivity over the years. Which we then cleaned, stored in our local MOngoDB database using our Flask-Powered API and visualise the different datasets in mutliple ways with dynamic and interactive Charts and Map with submit buttons and a year slider. 
 
 #	Our Theme: 
 ### Visualising Global Internet and Phone Usage:
@@ -58,7 +58,7 @@ https://www.kaggle.com/datasets/qramkrishna/world-coordinates?select=world_count
 ### •	Database: 
 MongoDB using Flask-PyMongo 
 
-### •	Python Flask-powered API:
+### •	Python Flask API:
 To automatically fetch data and render the template
 
 ### •	Python using Pandas Jupyter Notebook:
@@ -102,7 +102,7 @@ Putting all of Step 3's data extraction and transformation in a function so we c
 
 ### Step 5
 
-Using Flask-Powered API to connect to our database, fetch the cleaned data from main.py and load data onto our MongoDB database.
+Using Flask API to connect to our database, fetch the cleaned data from main.py and load data onto our MongoDB database.
 
 •	See app.py
 
