@@ -169,7 +169,7 @@ Clone the GitHub repository and create a virtual environment using the follwing 
 3. Create a virtual environment now
 `virtualenv env`
 
-4. Finally actiivate teh virtual environment inside the directory for this project:
+4. Finally actiivate the virtual environment inside the directory for this project:
 `source env/bin/activate`
 
 
