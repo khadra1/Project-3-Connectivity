@@ -15,12 +15,13 @@ def plot_chart():
         filter2 = request.form.get("filter2")
         data = load_data(filter1,filter2)
         return render_template("index.html", data=data)
-    data = load_data('Fixed broadband subscriptions','Zimbabwe')
-    # Save the cleaned data to the database
-    conn_db = mongo.db.connectivity
-    conn_db.drop()
-    conn_db.update_one({}, {"$set": data}, upsert=True)
-    return render_template("index.html", data=data)
+
+    if request.method == "GET":
+        data = load_data('Fixed broadband subscriptions','Zimbabwe')
+        # Save the cleaned data to the database
+        conn_db = mongo.db.connectivity
+        conn_db.update_one({}, {"$set": data}, upsert=True)
+        return render_template("index.html", data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)

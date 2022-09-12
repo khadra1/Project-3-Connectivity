@@ -131,7 +131,6 @@ def load_data(filter1, filter2):
     table_list_keys = list(table_list.keys())
     for i in range(len(table_list_keys)):
         tempdf = table_list[table_list_keys[i]]
-        print("tempdf", tempdf)
         regions = tempdf[table_list_keys[i]].tolist()
         tempregions = {}
         for j in range(len(regions)):
