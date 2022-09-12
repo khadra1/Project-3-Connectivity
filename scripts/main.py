@@ -21,6 +21,7 @@ def load_data(filter1, filter2):
     cols = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     world_data.drop(world_data.columns[cols], axis=1, inplace=True)
 
+
     # Import the coordinate csv file, rename columns for merging with each other later on
     data_path = os.path.join(os.path.dirname(
         __file__), '..', 'data', "world_country.csv")
@@ -139,8 +140,4 @@ def load_data(filter1, filter2):
     output['tracedata'] = tracedata
     output['dataWorld']=data.to_json(orient='index', indent=4)
 
-
-
     return output
-# print (region_df)
-# def main():
